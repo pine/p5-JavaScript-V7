@@ -35,6 +35,7 @@ my %args = (
     },
 
     test_requires => {
+        'Test::Exception' => '0.43',
         'Test::More' => '0.98',
     },
 

@@ -52,7 +52,7 @@ PPCODE:
     rcode = v7_exec(v7, code, &result);
     if (rcode != V7_OK) {
         SV *errsv = get_sv("@", GV_ADD);
-        sv_setsv(errsv, v7_get_error_sv(v7, "exec", result));
+        sv_setsv(errsv, v7_get_error_sv(v7, "v7_exec", result));
         croak(NULL);
     }
 
@@ -84,7 +84,7 @@ PPCODE:
     rcode = v7_apply(v7, func, V7_UNDEFINED, args, &result);
     if (rcode != V7_OK) {
         SV *errsv = get_sv("@", GV_ADD);
-        sv_setsv(errsv, v7_get_error_sv(v7, "apply", result));
+        sv_setsv(errsv, v7_get_error_sv(v7, "v7_apply", result));
         croak(NULL);
     }
 

@@ -1,5 +1,8 @@
 use strict;
-use Test::More 0.98;
+use warnings FATAL => 'all';
+use utf8;
+
+use Test::More;
 
 use_ok $_ for qw(
     JavaScript::V7

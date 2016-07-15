@@ -67,6 +67,8 @@ PPCODE:
 {
     struct v7 *v7 = XS_OBJ_TO_PTR(ST(0), struct v7*);
 
+    if (items < 2) croak("function name is required");
+
     char     *func_name = SvPV_nolen(ST(1));
     v7_val_t func       = v7_get(v7, v7_get_global(v7), func_name, ~0);
 

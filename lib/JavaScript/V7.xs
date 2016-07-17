@@ -7,7 +7,6 @@ extern "C" {
 #include <perl.h>
 #include <XSUB.h>
 
-#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 
